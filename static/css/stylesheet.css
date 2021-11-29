@@ -1,0 +1,182 @@
+/* general */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+a {
+ text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+.clickable:hover {
+ animation: pulse 0.5s;
+ animation-timing-function: linear;  
+}
+.clickable:hover a {
+ text-decoration: none !important;
+}
+@keyframes pulse {
+ 0% { transform: scale(1); }
+ 50% { transform: scale(1.1);}
+ 75% { transform: scale(1.2); }
+ 100% { transform: scale(1); }
+}
+
+/* header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 2px solid #FAC9B8;
+  background-color: #2F243A;
+}
+header li {
+ list-style-type: none;
+}
+.logo {
+  background-color: inherit;
+  width: min(50vw, 5em);
+}
+.navbar {
+    margin-bottom: 0.3em !important;
+    padding-top: 0.3em !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+.menu {
+  display: flex !important;
+  gap: 3em;
+  font-size: 1.5em;
+  padding-top: 0.5em !important;
+}
+.menu div {
+position: relative;
+}
+.menu a {
+  position: relative;
+  color: white !important;
+}
+.food {
+  position: relative;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid #2F243A;
+  font-size: 0.8em;
+  top: 100%;
+  right: -100%;
+  padding-left: 2em;
+  width: 350%;
+  text-align: center;
+}
+.dropdown a {
+  display: block;
+  background-color: #444054;
+  color: white;
+  border: 2px solid #2F243A;
+  border-width: 0 2px 2px 2px;
+  padding: 0.2em;
+}
+.food:hover .dropdown{
+  display: inline-block;
+  position: absolute;
+ }
+.menu a:hover{
+  text-decoration: underline !important;
+}
+
+/*body*/
+main {
+  background-color: #FAC9B8;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.landingpage {
+  margin-bottom: 3em;
+  background-image: url(../img/berries.jpg);
+  background-size: cover;
+  height: 80vh;
+  text-align: center;
+  background-attachment: fixed;
+}
+.landingpage h1, .landingpage p{
+  background: none;
+  color: white;
+}
+.landingpage h1 {
+  font-size: 8em;
+  padding-top: 1em;
+}
+.landingpage p {
+  font-size: 3em;
+  padding-top: 0.5em;
+}
+.emphasize {
+  color: #DB8A74;
+  background: none;
+}
+.content {
+  text-align: center;
+  font-size: 3em;
+}
+.menubutton, .contactbutton {
+  display: inline-block;
+  font-size: 0.6em;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 0.5em;
+  padding: 0.3em;
+  background-color: #444054;
+  color: white !important;
+}
+
+.gallery {
+ margin-left: 2em;
+ margin-right: 2em;
+}
+.gallerytxt {
+ text-align: center;
+}
+
+/* footer */
+footer {
+  background-color: #2F243A;
+  padding: 1em;
+}
+footer li {
+ list-style-type: none;
+}
+.footernavbar {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-left: 13em;
+  padding-right: 13em;
+}
+.footermenu {
+  display: flex;
+  gap: 3em;
+  font-size: 1em;
+}
+.footermenu a {
+  color: white !important;
+}
+.social-icons {
+  display: flex;
+  gap: 1em;
+
+}
+footer img {
+  height: 4em;
+  padding: 0.5em;
+}
+
