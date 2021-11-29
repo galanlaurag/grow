@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+  <html>
+        {% block head %}
+	<head>
+      <title>Grow</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+<link rel="manifest" href="/static/favicon/site.webmanifest">
+<link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="{{ url_for('static', filename='css/stylesheet.css') }}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+
+      </head>
+	{% endblock %}
+    <body>
+        {% block header %}
+        <header>
+	<nav class="navbar">
+          <a href="/"><img class="logo clickable" src="{{url_for('static', filename='img/logo.svg') }}"></a>
+          <ul class="menu">
+            <li class="clickable"><a href="/about">About</a></li>
+            <li class="clickable"><a href="/contact">Contact</a></li>
+            <li class="food"><div class="clickable"><a href="/menu">Menu</a></div>
+              <ul class="dropdown">
+                <li class="clickable"><a href="/menu/juices">Juices</a></li>
+                <li class="clickable"><a href="/menu/smoothies">Smoothies</a></li>
+                <li class="clickable"><a href="/menu/smoothiebowls">Smoothie bowls</a></li>
+                <li class="clickable"><a href="/menu/salads">Salads</a></li>
+              </ul>
+            </li>
+            <li class="clickable"><a href="/gallery">Gallery</a></li>
+          </ul>
+        </nav>
+	</header>
+        {% endblock %}
+
+	{% block main %}
+	<main>
+	</main>
+	{% endblock %}	
+      
+	{% block footer %}
+        <footer>
+	<nav class="footernavbar">
+          <ul class="footermenu">
+            <li class="clickable"><a href="mailto:contact@growcafe.com"><img src="{{url_for('static', filename='img/mail.svg') }}">contact@growcafe.com</a></li>
+            <li class="clickable"><a href="tel:+447284928491"><img src="{{url_for('static', filename='img/tel.svg') }}">+44 728 4928 491<a></li>
+          </ul>
+
+          <div class="social-icons">
+            <a target="_blank" href="https://www.facebook.com" class="facebookicon"><img class="clickable" src="{{url_for('static', filename='img/facebook.svg') }}">
+            <a target="_blank" href="https://www.instagram.com" class="instagramicon"><img class="clickable" src="{{url_for('static', filename='img/instagram.svg') }}">
+	    <a target="_blank" href="https://www.tiktok.com" class="tiktokicon"><img class="clickable" src="{{url_for('static', filename='img/tiktok.svg') }}">
+          </div>
+        </nav>
+	</footer>
+	{% endblock %}
+    </body>
+  </html>

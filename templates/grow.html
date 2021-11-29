@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+	{% block head %}
+      <title>Grow</title>
+
+	
+<link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+<link rel="manifest" href="/static/favicon/site.webmanifest">
+<link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+      <link href="{{ url_for('static', filename='css/stylesheet.css') }}" rel="stylesheet" />
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+	{% endblock %}
+    </head>
+    <body>
+      <header>
+	{% block header %}
+        <nav class="navbar">
+          <a href=""><img class="logo clickable" src="{{url_for('static', filename='img/logo.png') }}"></a>
+          <ul class="menu">
+            <li class="clickable"><a href="about.html">About</a></li>
+            <li class="clickable"><a href="contact.html">Contact</a></li>
+            <li class="food"><div class="clickable"><a href="menu.html">Menu</a></div>
+              <ul class="dropdown">
+                <li class="clickable"><a href="menu.html/juices">Juices</a></li>
+                <li class="clickable"><a href="menu.html/smoothies">Smoothies</a></li>
+                <li class="clickable"><a href="menu.html/smoothiebowls">Smoothie bowls</a></li>
+                <li class="clickable"><a href="menu.html/salads">Salads</a></li>
+              </ul>
+	    </li>
+            <li class="clickable"><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </nav>
+	{% endblock %}
+      </header>
+
+      <main>
+        <section class="landingpage">
+          <h1 class="name">Grow</h1>
+          <p>Eat well - <span class="emphasize">Live</span> well</p>
+        </section>
+
+        <section class="content">
+          <a href="menu.html" class="menubutton clickable">View our menu</a>
+
+<!--Carousel-->
+<!--<div class="container-fluid">-->
+		
+<!-- Carousel container -->
+<div id="my-pics" class="carousel slide" data-bs-ride="carousel" style="width:70%;margin:auto">
+
+<!-- Indicators -->
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#my-pics" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#my-pics" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<button type="button" data-bs-target="#my-pics" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+
+<!-- Content -->
+<div class="carousel-inner">
+
+<!-- Slide 1 -->
+<div class="carousel-item active" data-bs-interval="3500">
+<img src="{{ url_for('static', filename='img/image.jpg') }}" alt="1" class="d-block w-100">
+</div>
+
+<!-- Slide 2 -->
+<div class="carousel-item" data-bs-interval="3500">
+<img src="{{ url_for('static', filename='img/image2.jpg') }}" alt="2" class="d-block w-100">
+</div>
+
+<!-- Slide 3 -->
+<div class="carousel-item" data-bs-interval="3500">
+<img src="{{ url_for('static', filename='/img/image3.jpg') }}" alt="3" class="d-block w-100">
+</div>
+
+</div>
+
+<!-- Previous/Next controls -->
+<button class="carousel-control-prev" data-bs-target="#my-pics" type="button" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" data-bs-target="#my-pics" type="button" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+
+</div>
+
+<!--</div>-->
+		
+<!-- jQuery library -->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<!-- Bootstrap JS -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        </section>
+
+      </main>
+
+      <footer>
+        <nav class="footernavbar">
+          <ul class="footermenu">
+            <li class="clickable"><a href="mailto:contact@growcafe.com"><img src="{{url_for('static', filename='img/mail.png') }}">contact@growcafe.com</a></li>
+            <li class="clickable"><a href="tel:+447284928491"><img src="{{url_for('static', filename='img/tel.png') }}">+44 728 4928 491<a></li>
+          </ul>
+
+          <div class="social-icons">
+            <a target="_blank" href="https://www.facebook.com" class="facebookicon"><img class="clickable" src="{{url_for('static', filename='img/facebook.png') }}"></a>
+            <a target="_blank" href="https://www.instagram.com" class="instagramicon"><img class="clickable" src="{{url_for('static', filename='img/instagram.png') }}"></a>
+          </div>
+        </nav>
+      </footer>
+
+
+    </body>
+  </html>

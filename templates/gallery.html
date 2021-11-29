@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+<body>
+{% block header %}
+{{ super() }}
+{% endblock %}
+{% block main %}
+<main>
+<section class="content">
+<h1 class="gallerytxt">Hungry?</h1>
+<a href="/contact" class="contactbutton clickable">Contact us to book a table!</a>
+
+<!-- Gallery -->
+  <section class="gallery">
+    <div class="row">
+	 <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food1.jpg') }}" class="w-100"/>
+      	</div>
+	<div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food2.jpg') }}" class="w-100"/>
+        </div>
+	<div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food3.jpg') }}" class="w-100"/>
+        </div>
+	<div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food4.jpg') }}" class="w-100"/>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food5.jpg') }}" class="w-100"/>
+        </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food6.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food7.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food8.jpg') }}" class="w-100"/>
+      </div>
+   </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food9.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food10.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food11.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food12.jpg') }}" class="w-100"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food13.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food14.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food15.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food16.jpg') }}" class="w-100"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food17.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food18.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food19.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food20.jpg') }}" class="w-100"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food21.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food22.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food23.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food24.jpg') }}" class="w-100"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food25.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food26.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food27.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food28.jpg') }}" class="w-100"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food29.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food30.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food31.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food32.jpg') }}" class="w-100"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food33.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food34.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food35.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food36.jpg') }}" class="w-100"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food37.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food38.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food39.jpg') }}" class="w-100"/>
+      </div>
+      <div class="col-md-4 mt-3 col-lg-3">
+          <img src="{{ url_for('static', filename='/food/food40.jpg') }}" class="w-100"/>
+      </div>
+    </div>
+  <!-- Gallery -->
+  </section>
+</section>
+</main>
+{% endblock %}
+{% block footer %}
+{{ super() }}
+{% endblock %}
+</body>
+</html>
