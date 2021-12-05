@@ -300,7 +300,7 @@ input, select, textarea {
 .firstname, .date{
   width: 95%;
 }
-#datefield{
+#date{
   resize: none;
 }
 .submit {

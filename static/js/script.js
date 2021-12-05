@@ -67,17 +67,7 @@ drinks.classList.add("active");
 
 // flexible form
 $("#reason").change(function() {
-  if ($(this).val() == "booking") {
-    $('.phone').show();
-    $('#phone').attr('required', '');
-    $('.date').show();
-    $('#date').attr('required', '');
-    $('.time').show();
-    $('#time').attr('required', '');
-    $('.comment').show();
-    $('.message').hide();
-    $('#message').removeAttr('required');
-  } else {
+  if ($(this).val() != "booking") {
     $('.phone').hide();
     $('#phone').removeAttr('required');
     $('.date').hide();
@@ -86,8 +76,30 @@ $("#reason").change(function() {
     $('#time').removeAttr('required');
     $('.comment').hide();
     $('.message').show();
-    $('#message').attr('required', '');
-    $('#message').attr('data-error', 'This field is required.');
+    $('#message').attr('required');  
+ }else{
+    $('.phone').show();
+    $('#phone').attr('required');
+    $('.date').show();
+    $('#date').attr('required');
+    $('.time').show();
+    $('#time').attr('required');
+    $('.comment').show();
+    $('.message').hide();
+    $('#message').removeAttr('required');
+//  });
+//$("#reason").change(function() {
+//if ($(this).val() == "general" || "other") {
+  //  $('.phone').hide();
+   // $('#phone').removeAttr('required');
+  //  $('.date').hide();
+  //  $('#date').removeAttr('required');
+  //  $('.time').hide();
+  //  $('#time').removeAttr('required');
+  //  $('.comment').hide();
+  //  $('.message').show();
+  //  $('#message').attr('required');
+//    $('#message').attr('data-error', 'This field is required.');
   }
 });
 $("#reason").trigger("change");

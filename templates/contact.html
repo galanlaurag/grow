@@ -26,7 +26,7 @@
               </div>
             </div>
            </section>
-          <form class="form"  method=post>
+          <form class="form" action="/contact/" method="POST">
             <div class="formelelemnt firstname">
               <label for="fname">First name *</label>
               <input type="text" name="firstname" placeholder="John" required>
@@ -34,7 +34,7 @@
 
             <div class="formelelemnt lastname">
               <label for="lname">Last name *</label>
-              <input type="text" name="firstname" placeholder="Smith" required>
+              <input type="text" name="lastname" placeholder="Smith" required>
             </div>
 
             <div class="formelelemnt email">
@@ -53,26 +53,26 @@
 
             <div class="formelelemnt phone">
               <label for="phone">Phone number *</label>
-              <input type="tel" name="phone" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} [0-9]{3} [0-9]{4}|[0-9]{10}|[0-9]{11}|[0-9]{5} [0-9]{6}" required>
+              <input type="tel" id="phone" name="phone" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} [0-9]{3} [0-9]{4}|[0-9]{10}|[0-9]{11}|[0-9]{5} [0-9]{6}" required>
             </div>
 
             <div class="formelelemnt date">
               <label for="date">Date *</label>
-              <input type="date" name="date" id="datefield" required>
+              <input type="date" name="date" id="date" required>
             </div>
 
             <div class="formelelemnt time">
               <label for="appt">Time *</label>
-              <input type="timepicker" name="time" id="timefield" placeholder="8:00" required>
+              <input type="timepicker" name="time" id="time" placeholder="8:00" required>
             </div>
 
             <div class="formelelemnt message">
               <label for="message">Message *</label>
-              <textarea name="message" placeholder="Your message..." rows="5" required></textarea>
+              <textarea name="message" id="message" placeholder="Your message..." rows="5" required></textarea>
             </div>
             <div class="formelelemnt comment">
               <label for="comment">Comment</label>
-              <textarea name="comment" placeholder="Optional"></textarea>
+              <textarea name="comment" id="comment" placeholder="Optional"></textarea>
             </div>
 
             <div class="formelelemnt submit">

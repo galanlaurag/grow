@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, redirect
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,9 +13,24 @@ def gallery():
 def about():
         return render_template('about.html'), 200
 
-@app.route('/contact/')
+@app.route('/contact/', methods=["GET", "POST"])
 def contact():
-        return render_template('contact.html'), 200
+
+	if request.method == "POST":
+		req = request.form
+		name = req["firstname"]
+		surname = req["lastname"]
+		email = req["email"]
+		reason = req["reason"]
+		telephone = req["phone"]
+		date = req["date"]
+		time = req["time"]
+		message = req["message"]
+		comment = req["comment"]
+		print(name, surname, email, reason, telephone, date, time, message, comment)
+		return redirect(request.url)        
+
+	return render_template('contact.html'), 200
 
 @app.route('/menu/')
 def menu():
