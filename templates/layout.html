@@ -26,6 +26,8 @@
         <header>
 	<nav class="navbar">
           <a href="/" class="grow clickable"><img class="logo" src="{{url_for('static', filename='img/logo.svg') }}"><p class="logoname">Grow</p></a>
+		<label class="hamburgermenu" for="toggle" style="color:white">&#9776;</label>
+	        <input type="checkbox" id="toggle"></input>
           <ul class="menu">
             <li class="clickable {% if request.endpoint == "about" %}active{% endif %}"><a href="/about">About</a></li>
             <li class="clickable {% if request.endpoint == "contact" %}active{% endif %}"><a href="/contact">Contact</a></li>
@@ -39,7 +41,7 @@
               </ul>
             </li>
             <li class="clickable {% if request.endpoint == "gallery" %}active{% endif %}"><a href="/gallery">Gallery</a></li>
-          </ul>
+	</ul>
         </nav>
 	</header>
         {% endblock %}

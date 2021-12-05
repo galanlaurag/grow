@@ -66,13 +66,10 @@ color: white;
     padding: 0 7em 0 7em;
 }
 .menu {
-  display: flex !important;
+  display: flex;
   gap: 3em;
   font-size: 1.5em;
   padding-top: 0.5em !important;
-}
-.menu div {
-position: relative;
 }
 .menu a {
   position: relative;
@@ -113,10 +110,12 @@ position: relative;
  text-decoration: underline !important;
  transform: scale(1.1);
 }
-.icon {
-  display: none;
+.hamburgermenu, #toggle {
+ text-align: right;
+ font-size: 3em;
+ margin-right: 0.5em;
+ display: none;
 }
-
 
 /*body*/
 main {
@@ -221,7 +220,8 @@ list-style-type: none;
 display: flex;
 align-items: center;
 justify-content: space-between !important;
-padding: 0.2em 12em 0.5em 12em;
+padding: 0.5em 12em 0.5em 12em;
+border-bottom: 1px solid #444054;
 }
 .navmenuitem{
 color: black !important;
@@ -259,7 +259,7 @@ margin-left: 1em;
 .anchor{
 display: block;
 position: relative;
-top: -250px;
+top: -7em;
 visibility: hidden;
 }
 
@@ -396,7 +396,7 @@ footer li {
 }
 .footermenu {
   display: flex;
-  flex: 70%;
+  flex: 65%;
   gap: 3em;
   font-size: 1em;
 }
@@ -404,7 +404,7 @@ footer li {
   color: white !important;
 }
 .social-icons {
-  flex: 30%;
+  flex: 35%;
   gap: 1em;
 }
 footer img, .details img {
@@ -413,7 +413,7 @@ footer img, .details img {
 }
 
 /*responsiveness*/
-@media (max-width: 1112px) {
+@media only screen and (max-width: 1112px) {
 /*header*/
 .navbar{
  padding: 0 1.5em 0 1.5em;
@@ -483,36 +483,55 @@ width: 100%;
 /*menu*/
 .navmenu{
 top: 3em;
-padding: 0.7em 1.5em 1em 1.5em;
+padding: 0.7em 0.5em 0.7em 0.5em;
 font-size: 0.5em;
 }
 .menusection{
 margin: 1em 1em 2em 1em;
 padding: 0.5em 1em 0.5em 1em;
 }
+.anchor{
+top: -9em;
+}
 
 /*footer*/
 .footernavbar {
-  padding: 0 2em 0 2em;
+  padding: 0 0.5em 0 0.5em;
+}
+.footermenu {
+  gap: 1em;
+  font-size: 0.7em;
+}
+.social-icons {
+  gap: 0.5em;
+  font-size: 0.7em;
 }
 }
 
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
 main {
 margin: 0;
-padding-top: 4em;;
+padding-top: 5em;;
 }
 /*header*/
 header{
-height: 4em;
+height: 4.5em;
 }
 .navbar{
- padding: 0 0.5em 0 0.5em !important;
+ padding: 0;
+ margin: 0;
 }
 .menu {
-font-size: 1em;
-float: right;
+font-size: 2em;
+background-color: #444054;
+width: 100%;
+text-align: center;
+padding: 0 !important;
+display: none;
+}
+.grow{
+margin-left: 0.5em;
 }
 .logo{
 width: min(30vw, 3em);
@@ -520,7 +539,21 @@ width: min(30vw, 3em);
 .logoname{
 font-size: 2em !important;
 }
-
+.hamburgermenu{
+display: block;
+cursor: pointer;
+}
+.menu li{
+display: block;
+padding: 0.5em;
+border-bottom: 1px solid #2F243A;
+}
+.dropdown{
+display: none !important;
+}
+#toggle:checked + .menu{
+display: block ;
+}
 
 /*index*/
 .landingpage {
@@ -528,7 +561,7 @@ margin-top: 1.5em;
 height: 35vh;
 }
 .landingpage h1 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .landingpage p {
   font-size: 1em;
@@ -548,7 +581,7 @@ margin: 1em;
 padding: 1em 0 1em 0;
 }
 .abouttext{
-margin: 1em;
+margin: 0.5em;
 }
 .imgabout{
 width: 60%;
@@ -556,13 +589,13 @@ width: 60%;
 
 /*contact*/
 .form{
-padding: 1em;
+padding: 0.5em;
 }
 .form, .details {
- margin: 1em;
+ margin: 0.5em;
 }
 .contact {
-margin: 1em;
+margin: 0.5em;
 }
 .mapouter, .gmap_canvas{
 height: 20em;
@@ -570,13 +603,13 @@ height: 20em;
 
 /*menu*/
 .navmenu{
-top: 5.5em;
+top: 5em;
 padding: 0.2em 0.5em 0.5em 0.5em;
 font-size: 0.3em;
 }
 .menusection{
-margin: 1em 0.5em 2em 0.5em;
-padding: 0.5em 0.5em 0.5em 0.5em;
+margin: 1em 0.3em 2em 0.3em;
+padding: 0.5em 0.2em 0.5em 0.2em;
 }
 
 /*footer*/
