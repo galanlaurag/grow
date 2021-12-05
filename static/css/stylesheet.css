@@ -130,7 +130,7 @@ main {
   background-image: url(../img/berries.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 75vh;
+  height: 80vh;
   text-align: center;
   background-attachment: fixed;
 }
@@ -396,7 +396,7 @@ footer li {
 }
 .footermenu {
   display: flex;
-  flex: 65%;
+  flex: 70%;
   gap: 3em;
   font-size: 1em;
 }
@@ -404,8 +404,9 @@ footer li {
   color: white !important;
 }
 .social-icons {
-  flex: 35%;
-  gap: 1em;
+  flex: 30%;
+  text-align: right;
+  padding: 0.5em;
 }
 footer img, .details img {
   height: 4em;
@@ -565,6 +566,7 @@ height: 35vh;
 }
 .landingpage p {
   font-size: 1em;
+  margin-bottom: 5em;
 }
 #my-pics {
 width: 90% !important;
