@@ -3,7 +3,7 @@
         {% block head %}
 	<head>
       <title>Grow</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
@@ -14,8 +14,12 @@
 <meta name="theme-color" content="#ffffff">
 
         <link href="{{ url_for('static', filename='css/stylesheet.css') }}" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet"/>
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">	
+<!--	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>-->
 	
       </head>
 	{% endblock %}
@@ -23,20 +27,20 @@
         {% block header %}
         <header>
 	<nav class="navbar">
-          <a href="/"><img class="logo clickable" src="{{url_for('static', filename='img/logo.svg') }}"></a>
+          <a href="/" class="grow clickable"><img class="logo" src="{{url_for('static', filename='img/logo.svg') }}"><p class="logoname">Grow</p></a>
           <ul class="menu">
-            <li class="clickable"><a href="/about">About</a></li>
-            <li class="clickable"><a href="/contact">Contact</a></li>
-            <li class="food"><div class="clickable"><a href="/menu">Menu</a></div>
+            <li class="clickable {% if request.endpoint == "about" %}active{% endif %}"><a href="/about">About</a></li>
+            <li class="clickable {% if request.endpoint == "contact" %}active{% endif %}"><a href="/contact">Contact</a></li>
+            <li class="food"><div class="clickable {% if request.endpoint == "menu" %}active{% endif %}"><a href="/menu">Menu</a></div>
               <ul class="dropdown">
-                <li class="clickable"><a href="/menu/#juices">Juices</a></li>
-                <li class="clickable"><a href="/menu/#shakes">Shakes</a></li>
-                <li class="clickable"><a href="/menu/#bowls">Smoothie bowls</a></li>
-                <li class="clickable"><a href="/menu/#savoury">Savoury</a></li>
-                <li class="clickable"><a href="/menu/#drinks">Other drinks</a></li>   
+                <li class="clickable"><a href="/menu/#juices" onclick="juices()">Juices</a></li>
+                <li class="clickable"><a href="/menu/#shakes" onclick="shakes()">Shakes</a></li>
+                <li class="clickable"><a href="/menu/#bowls" onclick="bowls()">Smoothie bowls</a></li>
+                <li class="clickable"><a href="/menu/#savoury" onclick="savoury()">Savoury</a></li>
+                <li class="clickable"><a href="/menu/#drinks" onclick="drinks()">Other drinks</a></li>   
               </ul>
             </li>
-            <li class="clickable"><a href="/gallery">Gallery</a></li>
+            <li class="clickable {% if request.endpoint == "gallery" %}active{% endif %}"><a href="/gallery">Gallery</a></li>
           </ul>
         </nav>
 	</header>
@@ -52,7 +56,7 @@
 	<nav class="footernavbar">
           <ul class="footermenu">
             <li class="clickable"><a href="mailto:contact@growcafe.com"><img src="{{url_for('static', filename='img/mail.svg') }}">contact@growcafe.com</a></li>
-            <li class="clickable"><a href="tel:+447284928491"><img src="{{url_for('static', filename='img/tel.svg') }}">+44 728 4928 491<a></li>
+            <li class="clickable"><a href="tel:+447284928491"><img src="{{url_for('static', filename='img/tel.svg') }}">+44&nbsp;728&nbsp;4928&nbsp;491<a></li>
           </ul>
 
           <div class="social-icons">
@@ -63,6 +67,10 @@
         </nav>
 	</footer>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	{% endblock %}y
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>-->
+	<script src="{{url_for('static', filename='js/script.js')}}"></script>
+	{% endblock %}
     </body>
   </html>
