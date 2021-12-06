@@ -6,6 +6,7 @@ app = Flask(__name__)
 con = sql.connect('var/database.db')
 con.execute('CREATE TABLE IF NOT EXISTS tbl_form (ID INTEGER PRIMARY KEY AUTOINCREMENT, ' + 'name TEXT, surname TEXT, email TEXT, reason TEXT, phone TEXT, date DATE, time TIME, message TEXT, comment TEXT)')
 
+#source: https://ichi.pro/pl/jak-korzystac-z-google-recaptcha-z-flask-241719104676243
 app.config['RECAPTCHA_SITE_KEY'] = '6LdBz34dAAAAAJKIZGQk7J4e5rcvrnuxphO5Y1_U'
 app.config['RECAPTCHA_SECRET_KEY'] = '6LdBz34dAAAAAKeCUdcN0XOcx8_NSFSinbuuMSJM'
 recaptcha = ReCaptcha(app)
