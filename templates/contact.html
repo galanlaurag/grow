@@ -11,6 +11,7 @@
 {% block main %}
 <main>
 <section class="content">
+{% block outcome %}{% endblock %}
 <section class="contact">
         <section class="details">
           <h1>Phone number:</h1>
@@ -27,7 +28,7 @@
             </div>
            </section>
           <form class="form" action="/contact/" method="POST">
-            <div class="formelelemnt firstname">
+	    <div class="formelelemnt firstname">
               <label for="fname">First name *</label>
               <input type="text" name="firstname" placeholder="John" required>
             </div>
@@ -58,12 +59,12 @@
 
             <div class="formelelemnt date">
               <label for="date">Date *</label>
-              <input type="date" name="date" id="date" required>
+              <input type="date" name="date" id="datefield" required>
             </div>
 
             <div class="formelelemnt time">
               <label for="appt">Time *</label>
-              <input type="timepicker" name="time" id="time" placeholder="8:00" required>
+              <input type="timepicker" name="time" id="timefield" placeholder="8:00" required>
             </div>
 
             <div class="formelelemnt message">
