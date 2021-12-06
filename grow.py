@@ -1,9 +1,14 @@
 from flask import Flask, render_template, url_for, request
+from flask_recaptcha import ReCaptcha 
 import sqlite3 as sql
 
 app = Flask(__name__)
 con = sql.connect('var/database.db')
 con.execute('CREATE TABLE IF NOT EXISTS tbl_form (ID INTEGER PRIMARY KEY AUTOINCREMENT, ' + 'name TEXT, surname TEXT, email TEXT, reason TEXT, phone TEXT, date DATE, time TIME, message TEXT, comment TEXT)')
+
+app.config['RECAPTCHA_SITE_KEY'] = '6LdBz34dAAAAAJKIZGQk7J4e5rcvrnuxphO5Y1_U'
+app.config['RECAPTCHA_SECRET_KEY'] = '6LdBz34dAAAAAKeCUdcN0XOcx8_NSFSinbuuMSJM'
+recaptcha = ReCaptcha(app)
 
 @app.route('/')
 def root():
@@ -38,7 +43,7 @@ def contact():
 			con = sql.connect('var/database.db')
 			c = con.cursor()
 			c.execute("INSERT INTO tbl_form (name, surname, email, reason, phone, date, time, message, comment) VALUES(?,?,?,?,?,?,?,?,?)", 
-				(name , surname , email , reason , phone , date , time , message , comment))
+				(name , surname , email , reason , phone , date , time , message , comment))				
 			con.commit()
 			return render_template('formsuccess.html'), 200
 		except con.Error:
