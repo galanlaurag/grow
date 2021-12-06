@@ -137,6 +137,7 @@ main {
   text-align: center;
   background-attachment: fixed;
 }
+
 .landingpage h1, .landingpage p{
   background: none;
   color: white;
@@ -150,16 +151,12 @@ main {
   padding: 0.5em 0 4em 0;
 }
 .emphasize {
-  color: #DA8C77;
+  color: #DB8A74;
   background: none;
 }
 .content {
   text-align: center;
   font-size: 3em;
-}
-.quote {
-text-align: center !important;
-margin: 0.2em !important;
 }
 .menubutton, .contactbutton, .gallerybutton{
   display: inline-block;
@@ -176,13 +173,9 @@ margin: 0.2em !important;
 font-size: 1.3em;
 margin: 1em 1em 3em 1em;
 }
-.indexgallerybutton {
-font-size: 0.45em;
-}
 .name {
   font-family: "Allura";font-size: 22px;
 }
-
 
 /*gallery*/
 .gallery {
@@ -195,24 +188,26 @@ font-size: 0.45em;
 }
 
 /*about*/
-.aboutall{
-background-color: rgba(255, 255, 255, 0.4);
-border-radius: 10px;
-margin: 0 3.5em 1.5em 3.5em;
-padding-top: 0.1em;
-}
 .about, .story, .philosophy{
 font-size: 0.35em;
+background-color: rgba(255, 255, 255, 0.4);
+border-radius: 0 0 10px 10px;
+margin: 0 7em 3em 7em;
+padding-top: 1em;
 display: flex;
 justify-content: space-between;
 align-items: center;
 }
-.story{
-margin-bottom: -2em;
-}
 .aboutheading{
 text-align: center;
-margin: 0.5em 0.5em 0.5em 0.5em;
+/*background-color: rgba(255, 255, 255, 0.4);
+margin: 0 2.94em 0 2.94em;
+padding: 0.5em 1.5em 0 1.5em;
+border-radius: 10px 10px 0 0;
+}
+.aboutheading:after{
+content: "";
+display: block;
 border-bottom: 2px solid #444054;
 }
 .abouttext {
@@ -517,11 +512,8 @@ background-size: 100% auto;
   font-size: 2em;
   padding-bottom: 4em;
 }
-#my-pics{
+#my-pics {
 width: 80% !important;
-}
-#reviews{
-width: 100% !important;
 }
 
 /*gallery*/
@@ -530,16 +522,15 @@ width: 100% !important;
 }
 
 /*about*/
-.aboutall{
-margin: 0 0.5em 0.5em 0.5em;
-padding: 0.5em 0 0.5em 0;
-}
 .about, .story, .philosophy{
+margin: 0 1.5em 1.5em 1.5em;
+padding: 1.5em 0 1.5em 0;
 display: block;
 }
-.story{
-margin-bottom: 0;
-}
+/*.aboutheading{
+margin: 0 0.7em 0 0.7em;
+padding: 0.5em 0.5em 0 0.5em; 
+}*/
 .abouttext{
 margin: 1em;
 }
@@ -549,9 +540,6 @@ padding: 0;
 }
 .button{
 margin: 1em;
-}
-.philosophy .button {
-margin-bottom: 0;
 }
 
 /*contact*/
@@ -669,7 +657,7 @@ background-size: 140% auto;
 height: auto;
 }
 .landingpage h1 {
-  padding-top: 1em;
+  padding-top: 1.5em;
   font-size: 3em;
 }
 .landingpage p {
@@ -679,9 +667,6 @@ height: auto;
 #my-pics {
 width: 90% !important;
 }
-.menubutton, .contactbutton, .gallerybutton{
-margin: 0.5em 0.1em 0.1em 0.1em;
-}
 
 /*gallery*/
 .gallery {
@@ -689,13 +674,9 @@ margin: 0.5em 0.1em 0.1em 0.1em;
 }
 
 /*about*/
-.aboutall{
-margin: 0 0.25em 0.5em 0.25em;
-padding: 0.25em 0 0.25em 0;
-}
 .about, .story, .philosophy{
-margin: 0.1em;
-padding: 0.5em 0 0.5em 0;
+margin: 1em;
+padding: 1em 0 1em 0;
 }
 .abouttext{
 margin: 0.5em;

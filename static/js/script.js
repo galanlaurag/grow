@@ -126,6 +126,7 @@ document.getElementById("datefield").setAttribute("placeholder", today);
 document.getElementById("datefield").setAttribute("min", today);
 
 
+
 //hamburger mobile menu 
 function hamburgerMenuFunction() {
   var x = document.getElementById("grownavbar");

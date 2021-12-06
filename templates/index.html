@@ -16,13 +16,66 @@
         </section>
 
         <section class="content">
-          <a href="/menu" class="menubutton clickable">View our menu</a>
 
-<!--Carousel-->
-<!--<div class="container-fluid">-->
+<section class="aboutall">
+<h1 class="aboutheading">Welcome to Grow!</h1>
+<div class="about">
+<div class="textwithlink">
+<p class="abouttext quote">“We believe in creating the best tasting food, by using only the highest quality, plant based produce. Our menu offers a wide variety - from juices, shakes, and other drinks - to smoothie bowls and savoury dishes. All sourced mostly locally from organic, small farms to best serve our local community.”</p>
+<a href="/about/" class="button menubutton clickable">Read more about us</a>
+</div></div></section>
 
+<!--carousel with reviews-->
+<div class="container fluid">
+ <div id="reviews" class="carousel carousel-dark slide" data-bs-ride="carousel" style="width:85%;margin:auto">
+
+  <div class="carousel-inner">
+
+	<!-- Slide 1 -->
+	<div class="carousel-item active" data-bs-interval="3500">
+	<img src="{{ url_for('static', filename='img/review1.png') }}" alt="1" class="d-block w-100">
+	</div>
+
+	<!-- Slide 2 -->
+	<div class="carousel-item" data-bs-interval="3500">
+	<img src="{{ url_for('static', filename='img/review2.png') }}" alt="2" class="d-block w-100">
+	</div>
+
+	<!-- Slide 3 -->
+	<div class="carousel-item" data-bs-interval="3500">
+	<img src="{{ url_for('static', filename='img/review3.png') }}" alt="3" class="d-block w-100">
+	</div>
+
+	<!-- Slide 4 -->
+	<div class="carousel-item" data-bs-interval="3500">
+	<img src="{{ url_for('static', filename='img/review4.png') }}" alt="4" class="d-block w-100">
+	</div>
+   </div>
+<!-- Previous/Next controls -->
+<button class="carousel-control-prev" data-bs-target="#reviews" type="button" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" data-bs-target="#reviews" type="button" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+ </div>
+</div>
+<br>
+<section class="aboutall">
+<h1 class="aboutheading">Grow with us</h1>
+<div class="about">
+<div class="textwithlink">
+<p class="abouttext quote">Interested in experiencing or finding out more?</p>
+<a href="/menu/" class="button menubutton clickable">See the menu</a>
+<a href="/contact/" class="button contactbutton clickable">Contact us</a>
+</div></div></section>
+
+<!--Carousel with images-->
+<div class="container-fluid">
 <!-- Carousel container -->
-<div id="my-pics" class="carousel slide" data-bs-ride="carousel" style="width:60%;margin:auto">
+<div id="my-pics" class="carousel slide carousel-fade" data-bs-ride="carousel" style="width:60%;margin:auto">
 
 <!-- Indicators -->
 <div class="carousel-indicators">
@@ -55,33 +108,25 @@
 
 <!-- Slide 4 -->
 <div class="carousel-item" data-bs-interval="3500">
-<img src="{{ url_for('static', filename='food/food6.jpg') }}" alt="3" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food6.jpg') }}" alt="4" class="d-block w-100">
 </div>
 
 <!-- Slide 5 -->
 <div class="carousel-item" data-bs-interval="3500">
-<img src="{{ url_for('static', filename='food/food12.jpg') }}" alt="3" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food12.jpg') }}" alt="5" class="d-block w-100">
 </div>
 
 <!-- Slide 6 -->
 <div class="carousel-item" data-bs-interval="3500">
-<img src="{{ url_for('static', filename='food/food24.jpg') }}" alt="3" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food24.jpg') }}" alt="6" class="d-block w-100">
 </div>
 </div>
 
-<!-- Previous/Next controls -->
-<button class="carousel-control-prev" data-bs-target="#my-pics" type="button" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" data-bs-target="#my-pics" type="button" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Next</span>
-</button>
-
+</div>
 </div>
 
-<!--</div>-->
+<a href="/gallery/" class="gallerybutton indexgallerybutton clickable">See more photos in our gallery</a>
+
 </section>
 </main>
 {% endblock %}
