@@ -20,12 +20,12 @@
 </p>
 <a href="/contact" class="button contactbutton clickable">Contact us to book a table</a>
 </div>
-<img src="/static//img/cafe.jpg" class="imgabout">
+<img src="{{ url_for('static', filename='img/cafe.jpg') }}" class="imgabout">
 </section>
 
 <h1 class="aboutheading">Our philosophy</h1>
 <section class="philosophy">
-<img src="/static//img/vegan.png" class="imgabout">
+<img src="{{ url_for('static', filename='img/vegan.png') }}" class="imgabout">
 <div class="textwithlink">
 <p class="abouttext">We thrive to deliver fresh, healthy, vegan, 100% natural products, following a minimalistic approach. All dishes at our cafe are plant-based, gluten-free, and sugar-free. The majority of products that we use are locally-delivered, bio, organic, and low-processed. We want every person coming through our doors to leave inspired by plants, completely satisfied, and, most importantly, truly nourished.
 <br><br>We are on a mission to try and reduce the pollution of our planet. All our takeaway boxes, bags, cups, cutlery, and napkins are 100% biodegradable. We compost and recycle all the waste that we produce when working. 
@@ -43,7 +43,7 @@
 <br><br>Fancy to see more mouth-watering photos of our food?</p>
 <a href="/gallery" class="button gallerybutton clickable">Check out our gallery</a>
 </div>
-<img src="/static//food/food19.jpg" class="imgabout">
+<img src="{{ url_for('static', filename='food/food19.jpg') }}" class="imgabout">
 </section>
 
 </section>

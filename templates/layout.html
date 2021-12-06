@@ -5,11 +5,11 @@
       <title>Grow</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
-<link rel="manifest" href="/static/favicon/site.webmanifest">
-<link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
+<link rel="mask-icon" href="{{ url_for('static', filename='favicon/safari-pinned-tab.svg') }}">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
@@ -29,9 +29,9 @@
 		<label class="hamburgermenu" for="toggle" style="color:white">&#9776;</label>
 	        <input type="checkbox" id="toggle"></input>
           <ul class="menu">
-            <li class="clickable {% if request.endpoint == "about" %}active{% endif %}"><a href="/about">About</a></li>
-            <li class="clickable {% if request.endpoint == "contact" %}active{% endif %}"><a href="/contact">Contact</a></li>
-            <li class="food"><div class="clickable {% if request.endpoint == "menu" %}active{% endif %}"><a href="/menu">Menu</a></div>
+            <li class="clickable {% if request.endpoint == "about" %}active{% endif %}"><a href="/about/">About</a></li>
+            <li class="clickable {% if request.endpoint == "contact" %}active{% endif %}"><a href="/contact/">Contact</a></li>
+            <li class="food"><div class="clickable {% if request.endpoint == "menu" %}active{% endif %}"><a href="/menu/">Menu</a></div>
               <ul class="dropdown">
                 <li class="clickable"><a href="/menu/#juices" onclick="juices()">Juices</a></li>
                 <li class="clickable"><a href="/menu/#shakes" onclick="shakes()">Shakes</a></li>
@@ -40,7 +40,7 @@
                 <li class="clickable"><a href="/menu/#drinks" onclick="drinks()">Other drinks</a></li>   
               </ul>
             </li>
-            <li class="clickable {% if request.endpoint == "gallery" %}active{% endif %}"><a href="/gallery">Gallery</a></li>
+            <li class="clickable {% if request.endpoint == "gallery" %}active{% endif %}"><a href="/gallery/">Gallery</a></li>
 	</ul>
         </nav>
 	</header>
