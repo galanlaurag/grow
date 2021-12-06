@@ -33,11 +33,11 @@
             <li class="clickable {% if request.endpoint == "contact" %}active{% endif %}"><a href="/contact/">Contact</a></li>
             <li class="food"><div class="clickable {% if request.endpoint == "menu" %}active{% endif %}"><a href="/menu/">Menu</a></div>
               <ul class="dropdown">
-                <li class="clickable"><a href="/menu/#juices" onclick="juices()">Juices</a></li>
-                <li class="clickable"><a href="/menu/#shakes" onclick="shakes()">Shakes</a></li>
-                <li class="clickable"><a href="/menu/#bowls" onclick="bowls()">Smoothie bowls</a></li>
-                <li class="clickable"><a href="/menu/#savoury" onclick="savoury()">Savoury</a></li>
-                <li class="clickable"><a href="/menu/#drinks" onclick="drinks()">Other drinks</a></li>   
+                <li class="clickable" onclick="juices()"><a href="/menu/#juices">Juices</a></li>
+                <li class="clickable" onclick="skahes()"><a href="/menu/#shakes">Shakes</a></li>
+                <li class="clickable" onclick="bowls()"><a href="/menu/#bowls">Smoothie bowls</a></li>
+                <li class="clickable" onclick="savoury()"><a href="/menu/#savoury">Savoury</a></li>
+                <li class="clickable" onclick="drinks()"><a href="/menu/#drinks">Other drinks</a></li>   
               </ul>
             </li>
             <li class="clickable {% if request.endpoint == "gallery" %}active{% endif %}"><a href="/gallery/">Gallery</a></li>
@@ -45,12 +45,12 @@
         </nav>
 	</header>
         {% endblock %}
-
-	{% block main %}
 	<main>
-	</main>
+	{% block main %}
+	
 	{% endblock %}	
-      
+	<a onclick="topFunction()" id="myBtn" title="Go to top">Top</a> 
+	</main>     
 	{% block footer %}
         <footer>
 	<nav class="footernavbar">

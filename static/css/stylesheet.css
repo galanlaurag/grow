@@ -3,6 +3,7 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+ font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 }
 a {
  text-decoration: none !important;
@@ -19,13 +20,36 @@ transform: scale(1.1);
 header, main, footer {
 width: 100%;
 }
+html{
+scroll-behavior: smooth;
+}
 html, body {
 height: 100%;
 }
 body, main, .content {
 min-height: 100%;
 }
-
+#myBtn{
+display: block;
+visibility: hidden;
+position: fixed;
+z-index: 99;
+cursor: pointer;
+bottom: 2em;
+right: 4em;
+color: white;
+background-color: #444054;
+border: 2px solid #2F243A;
+border-radius: 100%;
+padding: 0.5em;
+}
+#myBtn:hover {
+  background-color: #DA8C77;
+}
+#myBtn.show{
+opacity: 1;
+visibility: visible;
+}
 
 /* header */
 header {
@@ -495,6 +519,10 @@ main {
 margin: 0;
 padding-top: 7em;
 }
+#myBtn{
+bottom: 1em;
+right: 3em;
+}
 /*header*/
 .navbar{
  padding: 0 1.5em 0 1.5em;
@@ -621,6 +649,10 @@ main {
 margin: 0;
 padding-top: 6em;;
 }
+#myBtn {
+bottom: 0.5em;
+right: 1em;
+}
 /*header*/
 header{
 height: 4.5em;
@@ -685,7 +717,7 @@ margin: 0.5em 0.1em 0.1em 0.1em;
 
 /*gallery*/
 .gallery {
- margin: 0.5em;
+ margin: 0 0.5em 0.5em 0.5em;
 }
 
 /*about*/

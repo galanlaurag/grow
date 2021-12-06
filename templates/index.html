@@ -9,7 +9,6 @@
 {{ super() }}
 {% endblock %}
 {% block main %}
-<main>
         <section class="landingpage">
           <h1 class="grow">Grow</h1>
           <p>Eat well - <span class="emphasize">Live</span> well</p>
@@ -33,22 +32,22 @@
 
 	<!-- Slide 1 -->
 	<div class="carousel-item active" data-bs-interval="3500">
-	<img src="{{ url_for('static', filename='img/review1.png') }}" alt="1" class="d-block w-100">
+	<img src="{{ url_for('static', filename='img/review1.svg') }}" alt="1" class="d-block w-100">
 	</div>
 
 	<!-- Slide 2 -->
 	<div class="carousel-item" data-bs-interval="3500">
-	<img src="{{ url_for('static', filename='img/review2.png') }}" alt="2" class="d-block w-100">
+	<img src="{{ url_for('static', filename='img/review2.svg') }}" alt="2" class="d-block w-100">
 	</div>
 
 	<!-- Slide 3 -->
 	<div class="carousel-item" data-bs-interval="3500">
-	<img src="{{ url_for('static', filename='img/review3.png') }}" alt="3" class="d-block w-100">
+	<img src="{{ url_for('static', filename='img/review3.svg') }}" alt="3" class="d-block w-100">
 	</div>
 
 	<!-- Slide 4 -->
 	<div class="carousel-item" data-bs-interval="3500">
-	<img src="{{ url_for('static', filename='img/review4.png') }}" alt="4" class="d-block w-100">
+	<img src="{{ url_for('static', filename='img/review4.svg') }}" alt="4" class="d-block w-100">
 	</div>
    </div>
 <!-- Previous/Next controls -->
@@ -128,7 +127,6 @@
 <a href="/gallery/" class="gallerybutton indexgallerybutton clickable">See more photos in our gallery</a>
 
 </section>
-</main>
 {% endblock %}
 {% block footer %}
 {{ super() }}

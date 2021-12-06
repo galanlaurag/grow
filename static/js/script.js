@@ -1,3 +1,18 @@
+//top button
+//sources: https://codepen.io/matthewcain/pen/ZepbeR, https://www.geeksforgeeks.org/how-to-animate-scrolltop-using-jquery/
+$(window).scroll(function() {
+  var btn = $('#myBtn');
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+function topFunction() {
+  $("html, body").animate(
+    { scrollTop: "0" }, 1000);
+}
+
 //active (underlined) navmenu elements
 function juices() {
 var juices = document.getElementById("onclickjuices");
@@ -125,8 +140,6 @@ today = yyyy + '-' + mm + '-' + dd;
 document.getElementById("datefield").setAttribute("placeholder", today);
 document.getElementById("datefield").setAttribute("min", today);
 
-
-
 //hamburger mobile menu 
 function hamburgerMenuFunction() {
   var x = document.getElementById("grownavbar");
@@ -136,4 +149,6 @@ function hamburgerMenuFunction() {
     x.className = "menu";
   }
 }
+
+
 

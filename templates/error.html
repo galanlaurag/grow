@@ -9,13 +9,11 @@
 {{ super() }}
 {% endblock %}
 {% block main %}
-<main>
 <section class="content">
 <h1 class="errormessage">Couldn’t find the page you requested.</h1>
 <a href="/"><h2 class="errormessage">Go back to the homepage</h2></a>
 <div class="clickable growerror"><a href="/"><img class="errorlogo" src="{{url_for('static', filename='img/logo.svg') }}"><p class="grow errorlogo">Grow</p></a></div>
 </section>
-</main>
 {% endblock %}
 {% block footer %}
 {{ super() }}
