@@ -40,7 +40,7 @@
 
             <div class="formelelemnt email">
               <label for="email">Email *</label>
-              <input type="text" name="email" placeholder="email@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+              <input onkeyup="this.value = this.value.toLowerCase();" type="text" name="email" placeholder="email@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
             </div>
 
             <div class="formelelemnt reason">
