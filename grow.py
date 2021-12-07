@@ -43,8 +43,7 @@ def contact():
 		try:
 			con = sql.connect('var/database.db')
 			c = con.cursor()
-			c.execute("INSERT INTO tbl_form (name, surname, email, reason, phone, date, time, message, comment) VALUES(?,?,?,?,?,?,?,?,?)", 
-				(name , surname , email , reason , phone , date , time , message , comment))				
+			c.execute("INSERT INTO tbl_form (name, surname, email, reason, phone, date, time, message, comment) VALUES(?,?,?,?,?,?,?,?,?)", (name , surname , email , reason , phone , date , time , message , comment))				
 			con.commit()
 			return render_template('formsuccess.html'), 200
 		except con.Error:
