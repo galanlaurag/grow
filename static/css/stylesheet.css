@@ -198,7 +198,10 @@ margin: 0.2em !important;
 }
 .button{
 font-size: 1.3em;
-margin: 1em 1em 3em 1em;
+margin: 1em;
+}
+.aboutallpage .button {
+margin-bottom: 3em;
 }
 .indexgallerybutton {
 font-size: 0.45em;
@@ -226,6 +229,9 @@ border-radius: 10px;
 margin: 0 3.5em 1.5em 3.5em;
 padding: 0.5em;
 padding-top: 0.1em;
+}
+.aboutallpage {
+padding: 0.5em 0 0 0;
 }
 .about, .story, .philosophy{
 font-size: 0.35em;
