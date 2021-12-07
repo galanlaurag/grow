@@ -3,7 +3,8 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
- font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+/* font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;*/
+font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 a {
  text-decoration: none !important;
@@ -47,7 +48,6 @@ padding: 0.5em;
   background-color: #DA8C77;
 }
 #myBtn.show{
-opacity: 1;
 visibility: visible;
 }
 
@@ -68,8 +68,8 @@ header li {
   width: min(40vw, 4em);
   position: relative;
 }
-.grow {
-font-family: 'Allura';
+.grow, .logo, .logoname {
+font-family: 'Allura' !important;
 color: white;
 }
 .grow:hover {
@@ -204,7 +204,8 @@ margin: 1em 1em 3em 1em;
 font-size: 0.45em;
 }
 .name {
-  font-family: "Allura";font-size: 22px;
+font-family: "Allura" !important;
+font-size: 22px;
 }
 
 
@@ -223,6 +224,7 @@ font-size: 0.45em;
 background-color: rgba(255, 255, 255, 0.4);
 border-radius: 10px;
 margin: 0 3.5em 1.5em 3.5em;
+padding: 0.5em;
 padding-top: 0.1em;
 }
 .about, .story, .philosophy{
