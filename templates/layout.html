@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <html lang="en">
+        {% block head %}
+	<head>
+      <title>Grow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
+<link rel="mask-icon" href="{{ url_for('static', filename='favicon/safari-pinned-tab.svg') }}">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+        <link href="{{ url_for('static', filename='css/stylesheet.css') }}" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">	
+	
+      </head>
+	{% endblock %}
+    <body>
+        {% block header %}
+        <header>
+	<nav class="navbar">
+          <a href="/" class="grow clickable"><img class="logo" src="{{url_for('static', filename='img/logo.svg') }}"><p class="logoname">Grow</p></a>
+		<!--source: https://www.youtube.com/watch?v=xMTs8tAapnQ-->
+		<label class="hamburgermenu" for="toggle" style="color:white">&#9776;</label>
+	        <input type="checkbox" id="toggle"></input>
+          <ul class="menu">
+            <li class="clickable {% if request.endpoint == "about" %}active{% endif %}"><a href="/about/">About</a></li>
+            <li class="clickable {% if request.endpoint == "contact" %}active{% endif %}"><a href="/contact/">Contact</a></li>
+            <li class="food"><div class="clickable {% if request.endpoint == "menu" %}active{% endif %}"><a href="/menu/">Menu</a></div>
+              <ul class="dropdown">
+                <li class="clickable" onclick="juices()"><a href="/menu/#juices">Juices</a></li>
+                <li class="clickable" onclick="skahes()"><a href="/menu/#shakes">Shakes</a></li>
+                <li class="clickable" onclick="bowls()"><a href="/menu/#bowls">Smoothie bowls</a></li>
+                <li class="clickable" onclick="savoury()"><a href="/menu/#savoury">Savoury</a></li>
+                <li class="clickable" onclick="drinks()"><a href="/menu/#drinks">Other drinks</a></li>   
+              </ul>
+            </li>
+            <li class="clickable {% if request.endpoint == "gallery" %}active{% endif %}"><a href="/gallery/">Gallery</a></li>
+	</ul>
+        </nav>
+	</header>
+        {% endblock %}
+	<main>
+	{% block main %}
+	
+	{% endblock %}	
+	<a onclick="topFunction()" id="myBtn" title="Go to top">Top</a> 
+	</main>     
+	{% block footer %}
+        <footer>
+	<nav class="footernavbar">
+          <ul class="footermenu">
+            <li class="clickable"><a href="mailto:contact@growcafe.com"><img src="{{url_for('static', filename='img/mail.svg') }}">contact@growcafe.com</a></li>
+            <li class="clickable"><a href="tel:+447284928491"><img src="{{url_for('static', filename='img/tel.svg') }}">+44&nbsp;728&nbsp;4928&nbsp;491<a></li>
+          </ul>
+
+          <div class="social-icons">
+            <a target="_blank" href="https://www.facebook.com" class="facebookicon"><img class="clickable" src="{{url_for('static', filename='img/facebook.svg') }}">
+            <a target="_blank" href="https://www.instagram.com" class="instagramicon"><img class="clickable" src="{{url_for('static', filename='img/instagram.svg') }}">
+	    <a target="_blank" href="https://www.tiktok.com" class="tiktokicon"><img class="clickable" src="{{url_for('static', filename='img/tiktok.svg') }}">
+          </div>
+        </nav>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+	<script src="{{url_for('static', filename='js/script.js')}}"></script>
+	{% endblock %}
+    </body>
+  </html>

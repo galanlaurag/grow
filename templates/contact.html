@@ -1,0 +1,94 @@
+<!DOCTYPE html>x
+<html>
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+<body>
+{% block header %}
+{{ super() }}
+{% endblock %}
+{% block main %}
+<section class="content">
+{% block outcome %}{% endblock %}
+<section class="contact">
+        <section class="details">
+          <h1>Phone number:</h1>
+            <div class="clickable"><a href="tel:+447284928491"><img src="{{url_for('static', filename='img/blacktel.svg') }}">+44 728 4928 491</a></div>
+          <h1>E-mail:</h1>
+            <div class="clickable"><a href="mailto:contact@growcafe.com"><img src="{{url_for('static', filename='img/blackmail.svg') }}">contact@growcafe.com</a></div>
+	  <h1>Opening hours:</h1>
+	    <p style="margin-bottom: 0;"><img src="{{url_for('static', filename='img/blackhours.svg')}}">Monday to Sunday 8am to 5pm</p>
+          <h1>Address:</h1>
+            <p><img src="{{url_for('static', filename='img/blacklocation.svg') }}">22 Young Street, Edinburgh EH2 4JB</p>
+            <!-- source: https://www.embedgooglemap.net/ -->
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe width="448" height="217" id="gmap_canvas" src="https://maps.google.com/maps?q=22%20Young%20St,%20Edinburgh%20EH2%204JB&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br>
+              </div>
+            </div>
+           </section>
+	   <section class="contactform">
+		<h1 class="formheading">Contact form</h1>
+          <form class="form" action="/contact/" method="POST">
+	    <div class="formelelemnt firstname">
+              <label for="fname">First name *</label>
+              <input type="text" name="firstname" placeholder="John" required>
+            </div>
+
+            <div class="formelelemnt lastname">
+              <label for="lname">Last name *</label>
+              <input type="text" name="lastname" placeholder="Smith" required>
+            </div>
+
+            <div class="formelelemnt email">
+              <label for="email">Email *</label>
+              <input onkeyup="this.value = this.value.toLowerCase();" type="text" name="email" placeholder="email@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            </div>
+
+            <div class="formelelemnt reason">
+              <label for="reason" class="reasonlabel">Reason for contacting us *</label>
+              <select name="reason" class="reasonselect" id="reason" required>
+                <option value="general">General question</option>
+                <option value="booking">Booking table</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="formelelemnt phone">
+              <label for="phone">Phone number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} [0-9]{3} [0-9]{4}|[0-9]{10}|[0-9]{11}|[0-9]{5} [0-9]{6}" required>
+            </div>
+
+            <div class="formelelemnt date">
+              <label for="date">Date *</label>
+              <input type="date" name="date" id="datefield" required>
+            </div>
+
+            <div class="formelelemnt time">
+              <label for="appt">Time *</label>
+              <input type="timepicker" name="time" id="timefield" placeholder="8:00" required>
+            </div>
+
+            <div class="formelelemnt message">
+              <label for="message">Message *</label>
+              <textarea name="message" id="message" placeholder="Your message..." rows="5" required></textarea>
+            </div>
+            <div class="formelelemnt comment">
+              <label for="comment">Comment</label>
+              <textarea name="comment" id="comment" placeholder="Optional"></textarea>
+            </div>
+		<div class="formelement recaptcha">{{ recaptcha }}</div>
+            <div class="formelelemnt submit">
+		<input type="submit" value="submit" id="submit"/>
+            </div>
+          </form>
+	</section>
+        </section>
+ </section>
+{% endblock %}
+{% block footer %}
+{{ super() }}
+{% endblock %}
+</body>
+</html>

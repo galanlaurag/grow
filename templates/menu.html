@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+<body>
+{% block header %}
+{{ super() }}
+{% endblock %}
+{% block main %}
+<section class="content">
+<h1 class="menuheader">Menu</h1>
+<ul class="navmenu">
+	<li onclick="juices()" id="onclickjuices" class="clickable"><a class="navmenuitem" href="/menu/#juices">Juices</a></li>
+	<li onclick="shakes()" id="onclickshakes" class="clickable"><a class="navmenuitem" href="/menu/#shakes">Shakes</a></li>
+	<li onclick="bowls()" id="onclickbowls" class="clickable"><a class="navmenuitem" href="/menu/#bowls">Smoothie bowls</a></li>
+	<li onclick="savoury()" id="onclicksavoury" class="clickable"><a class="navmenuitem" href="/menu/#savoury">Savoury</a></li>
+	<li onclick="drinks()" id="onclickdrinks" class="clickable"><a class="navmenuitem" href="/menu/#drinks">Other drinks</a></li>
+</ul>
+
+
+<section class="menusection">
+<h2 class="sectionheader">Juices<a name="juices" class="anchor"></a></h2>
+<h3 class="menucategory">Mono juices</h3>
+<dl class="menuitemlist">
+	<dt class="menuitem">Orange Juice</dt>
+		<dd class="menuitemdesc">100% orange</dd>
+	<dt class="menuitem">Apple juice</dt>
+		<dd class="menuitemdesc">100% apple</dd>
+        <dt class="menuitem">Celery juice</dt>
+                <dd class="menuitemdesc">100% celery</dd>
+</dl>
+<h3 class="menucategory">Fruit juices</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Tropical juice</dt>
+                <dd class="menuitemdesc">Pineapple, organge, mango, passion fruit</dd>
+        <dt class="menuitem">Sweet local juice</dt>
+                <dd class="menuitemdesc">Apple, grapes, lemon</dd>
+        <dt class="menuitem">Watermelon juice</dt>
+                <dd class="menuitemdesc">Watermelon, lime</dd>
+        <dt class="menuitem">Summer juice</dt>
+                <dd class="menuitemdesc">Pineapple, melon, lemon, mint</dd>
+</dl>
+<h3 class="menucategory">Green juices</h3>
+<dt class="menuitem">Tropical juice</dt>
+<dl class="menuitemlist">
+	<dt class="menuitem">Local green juice</dt>
+                <dd class="menuitemdesc">Apple, kale, cucumber, lemon, parsley, ginger</dd>
+        <dt class="menuitem">Tropical green juice</dt>
+                <dd class="menuitemdesc">Pineapple, spinach, orange, passion fruit</dd>
+        <dt class="menuitem">Sweet green juice</dt>
+        	<dd class="menuitemdesc">Grapes, spinach, lime</dd>
+</dl>
+<h3 class="menucategory">Veggie juices</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Local veggie juice</dt>
+                <dd class="menuitemdesc">Apple, beetroot, carrot, celery, lemon</dd>
+        <dt class="menuitem">Super veggie juice</dt>
+                <dd class="menuitemdesc">Kale, celery, cucumber, beetroot, carrot, garlic</dd>
+</dl>
+<h3 class="menucategory">Shots</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Ginger shot</dt>
+                <dd class="menuitemdesc">100% ginger</dd>
+        <dt class="menuitem">Immune shot</dt>
+                <dd class="menuitemdesc">Ginger, turmeric, garlic, lemon, cayenne</dd>
+</dl>
+</section>
+
+<section class="menusection">
+<h2 class="sectionheader">Shakes<a name="shakes" class="anchor"></a></h2>
+<h3 class="menucategory"></h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Berry shake</dt>
+                <dd class="menuitemdesc">Banana, strawberry, raspberry, blackberry, coconut water</dd>
+        <dt class="menuitem">Strawberry shake</dt>
+                <dd class="menuitemdesc">Banana, strawberry, date, coconut water</dd>
+	<dt class="menuitem">Green shake</dt>
+                <dd class="menuitemdesc">Banana, pineapple, spinach/kale, kiwi, date, coconut water</dd>
+</dl>
+<h3 class="menucategory">Other shakes</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Peanut butter shake</dt>
+                <dd class="menuitemdesc">Banana, peanut butter, date syrup, coconut water</dd>
+        <dt class="menuitem">Chocolate shake</dt>
+                <dd class="menuitemdesc">Banana, cocoa, cinnamon, date syrup, coconut water</dd>
+	<dt class="menuitem">Superfoods shake</dt>
+		<dd class="menuitemdesc">Banana, maca, goji berries, hemp seeds, dates, spirulina, coconut water</dd>
+</dl>
+</section>
+
+<section class="menusection">
+<h2 class="sectionheader">Smoothie bowls<a name="bowls" class="anchor"></a></h2>
+<h3 class="menucategory">Fruity smoothie bowls</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Berry smoothie bowl</dt>
+                <dd class="menuitemdesc">Strwberry, raspberry smoothie + granola, cocoa nibs, coconut flakes, blueberry</dd>
+        <dt class="menuitem">Tropical smoothie bowl</dt>
+                <dd class="menuitemdesc">Banana, pineapple, mango smoothie + strawberry, hemp seeds, almond flakes, passion fruit</dd>
+        <dt class="menuitem">Green smoothie bowl</dt>
+                <dd class="menuitemdesc">Banana, spinach, mango smoothie + banana, cocoa nibs, coconut flakes, berries</dd>
+</dl>
+<h3 class="menucategory">Other smoothie bowls</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Mix nut smoothie bowl</dt>
+                <dd class="menuitemdesc">Banana, almond butter, peanut butter smoothie + granola, date sytup, cashews, cocoa nibs</dd>
+        <dt class="menuitem">Yoghurt smoothie bowl</dt>
+                <dd class="menuitemdesc">Banana, coconut youghurt smoothie +  granola, apple mousse, pomegranate</dd>
+</dl>
+</section>
+
+<section class="menusection">
+<h2 class="sectionheader">Savoury<a name="savoury" class="anchor"></a></h2>
+<h3 class="menucategory">Salads</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Classic salad</dt>
+                <dd class="menuitemdesc">Mix lettuce, tofu, tomato, pepper, cucumber, raddish, spring onion, sprouts + dressing</dd>
+        <dt class="menuitem">Noodle salad</dt>
+                <dd class="menuitemdesc">Courgette noodles, cucumber noodles, carrot noodles + tomato dressing</dd>
+        <dt class="menuitem">Beetroot salad</dt>
+                <dd class="menuitemdesc">Beetroot, rocket, feta, sunflower seeds + dressing</dd>
+	<dt class="menuitem">Fruit salad</dt>
+                <dd class="menuitemdesc">Mix lettuce, mango, strawbery, kiwi, blueberry, raspberry, blackberry, banana</dd>
+</dl>
+<h3 class="menucategory">Soups</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Green cream soup</dt>
+                <dd class="menuitemdesc">Broccoli, spinach, potato, stock + spices</dd>
+        <dt class="menuitem">Tomato soup</dt>
+                <dd class="menuitemdesc">Tomato, dried tomato, pepper, carrot, lentils, stock + spices</dd>
+        <dt class="menuitem">Soup of the day</dt>
+                <dd class="menuitemdesc">Seasonal soup different every day</dd>
+</dl>
+<h3 class="menucategory">Fries</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Classic potato fries</dt>
+                <dd class="menuitemdesc">Potato, salt + sauce</dd>
+        <dt class="menuitem">Sweet potato fries</dt>
+                <dd class="menuitemdesc">Potato, salt + sauce</dd>
+        <dt class="menuitem">Veggie fries</dt>
+                <dd class="menuitemdesc">Carrot, beetroot, parsnip, courgette, spices + sauce</dd>
+</dl>
+<h3 class="menucategory">Veggies</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Steamed broccoli</dt>
+                <dd class="menuitemdesc">Broccoli, salt</dd>
+        <dt class="menuitem">Steamed kale</dt>
+                <dd class="menuitemdesc">Kale, salt</dd>
+        <dt class="menuitem">Carrots with hummus</dt>
+                <dd class="menuitemdesc">Carrot, hummus</dd>
+</dl>
+</section>
+
+<section class="menusection">
+<h2 class="sectionheader">Other drinks<a name="drinks" class="anchor"></a></h2>
+<h3 class="menucategory">Lemonade</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Classic lemonade</dt>
+                <dd class="menuitemdesc">Lemon, date syrup</dd>
+        <dt class="menuitem">Ginger lemonade</dt>
+                <dd class="menuitemdesc">Lemon, ginger, turmeric, date syrup</dd>
+        <dt class="menuitem">Rhubarb lemonade</dt>
+                <dd class="menuitemdesc">Rhubarb, lemon, date syrup</dd>
+</dl>
+<h3 class="menucategory">Tea</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Mint tea</dt>
+                <dd class="menuitemdesc">100% mint tea</dd>
+	<dt class="menuitem">Green tea</dt>
+                <dd class="menuitemdesc">100% green tea</dd>
+        <dt class="menuitem">Tropical tea</dt>
+                <dd class="menuitemdesc">Hibiscus, rosehip, orange peel, mango, passion fruit, chicory root</dd>
+        <dt class="menuitem">Rosehip tea</dt>
+                <dd class="menuitemdesc">100% rosehip tea</dd>
+</dl>
+<h3 class="menucategory">Hot chocolate</h3>
+<dl class="menuitemlist">
+        <dt class="menuitem">Classic hot chocolate</dt>
+                <dd class="menuitemdesc">Cocoa, almond/coconut milk, date syrup</dd>
+        <dt class="menuitem">Karob hot chocolate</dt>
+                <dd class="menuitemdesc">Karob, almond/coconut milk, date syrup</dd>
+</dl>
+</section>
+</section>
+
+{% endblock %}
+{% block footer %}
+{{ super() }}
+{% endblock %}
+</body>
+</html>
