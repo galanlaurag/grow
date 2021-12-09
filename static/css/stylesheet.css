@@ -5,6 +5,9 @@
  box-sizing: border-box;
  font-family: Rockwell, "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
 }
+.content{
+width: 100% !important;
+}
 a {
  text-decoration: none !important;
 }
@@ -18,7 +21,7 @@ transform: scale(1.1);
  text-decoration: none !important;
 }
 header, main, footer {
-width: 100%;
+width: 100% !important;
 }
 html{
 scroll-behavior: smooth;
@@ -58,6 +61,7 @@ header {
   height:5em;
   border-bottom: 2px solid #FAC9B8;
   background-color: #2F243A;
+  width: 100% important;
 }
 header li {
  list-style-type: none;
@@ -148,6 +152,7 @@ main {
   background-color: #FAC9B8;
   padding-top: 8em;
   padding-bottom: 3em;
+  width: 100% !important;
 }
 
 /*index*/
@@ -275,7 +280,6 @@ font-size: 0.4em;
 height: 4em;
 list-style-type: none;
 display: flex;
-/*display: block;*/
 align-items: center;
 justify-content: space-between !important;
 padding: 0.5em 12em 0.5em 12em;
@@ -495,6 +499,7 @@ position: absolute !important;
 margin-bottom: 0 !important;
 background-color: #2F243A;
 padding: 1em;
+width: 100% important;
 }
 footer li {
  list-style-type: none;
@@ -534,7 +539,7 @@ padding-top: 0.8em;
 main {
 margin: 0;
 padding-top: 7em;
-width: 100%;
+width: 100% !important;
 }
 #myBtn{
 bottom: 1em;
@@ -542,7 +547,7 @@ right: 3em;
 }
 /*header*/
 header{
-width: 100%;
+width: 100% !important;
 }
 .navbar{
  padding: 0 1.5em 0 1.5em;
@@ -651,7 +656,7 @@ top: -9em;
 
 /*footer*/
 footer{
-width: 100%;
+width: 100% !important;
 }
 .footernavbar {
   padding: 0 0.5em 0 0.5em;
@@ -671,7 +676,7 @@ width: 100%;
 main {
 margin: 0;
 padding-top: 6em;
-width: 100%
+width: 100% !important;
 }
 #myBtn {
 bottom: 0.5em;
@@ -680,7 +685,7 @@ right: 1em;
 /*header*/
 header{
 height: 4.5em;
-width: 100%;
+width: 100% !important;
 }
 .navbar{
  padding: 0;
@@ -689,7 +694,7 @@ width: 100%;
 .menu {
 font-size: 1.7em;
 background-color: rgba(63, 64, 84, 0.97);
-width: 100%;
+width: 100% !important;
 text-align: center;
 padding: 0 !important;
 display: none;
@@ -704,7 +709,7 @@ width: min(30vw, 3em);
 font-size: 2em !important;
 }
 .hamburgermenu{
-display: block;
+display: block !important;
 cursor: pointer;
 }
 .menu li{
@@ -799,7 +804,7 @@ width: 50% !important;
 
 /*footer*/
 footer{
-width: 100%;
+width: 100% !important;
 }
 .footernavbar {
   display: block;
