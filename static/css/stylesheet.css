@@ -54,7 +54,7 @@ visibility: visible;
 header {
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 35;
   height:5em;
   border-bottom: 2px solid #FAC9B8;
   background-color: #2F243A;
@@ -116,7 +116,6 @@ transform: scale(1.01);
   padding-left: 2em;
   width: 350%;
   text-align: center;
-  z-index: 20;
 }
 .dropdown a {
   display: block;
