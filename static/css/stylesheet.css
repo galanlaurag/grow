@@ -171,7 +171,7 @@ main {
 .landingpage p {
   font-size: 3em;
   padding: 0.5em 0 4em 0;
-  font-weight: light;
+  font-weight: light !important;
 }
 .emphasize {
   color: #DA8C77;
