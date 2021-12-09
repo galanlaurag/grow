@@ -171,11 +171,14 @@ main {
 .landingpage p {
   font-size: 3em;
   padding: 0.5em 0 4em 0;
+  font-family: Rockwell Light, "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
   font-weight: lighter !important;
 }
 .emphasize {
   color: #DA8C77;
   background: none;
+  font-family: Rockwell Light, "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
+  font-weight: lighter !important;
 }
 .content {
   text-align: center;
