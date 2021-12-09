@@ -1,3 +1,6 @@
+//AOS animate on scroll library
+AOS.init();
+
 //dark mode
 function onload() {
   document.getElementsByTagName('html')[0].classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');

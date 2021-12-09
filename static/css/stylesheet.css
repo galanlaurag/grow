@@ -3,8 +3,7 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
-/* font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;*/
-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+ font-family: Rockwell, "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
 }
 a {
  text-decoration: none !important;
@@ -42,7 +41,7 @@ color: white;
 background-color: #444054;
 border: 2px solid #2F243A;
 border-radius: 100%;
-padding: 0.5em;
+padding: 0.7em 0.75em 0.3em 0.75em;;
 }
 #myBtn:hover {
   background-color: #DA8C77;
@@ -65,7 +64,7 @@ header li {
 }
 .logo {
   background-color: inherit;
-  width: min(40vw, 4em);
+  width: min(35vw, 3.5em);
   position: relative;
 }
 .grow, .logo, .logoname {
@@ -210,7 +209,9 @@ font-size: 0.45em;
 font-family: "Allura" !important;
 font-size: 22px;
 }
-
+#reviews{
+margin-bottom: -0.5em !important;
+}
 
 /*gallery*/
 .gallery {
@@ -273,6 +274,7 @@ align-items: center;
 justify-content: space-between !important;
 padding: 0.5em 12em 0.5em 12em;
 border-bottom: 1px solid #444054;
+z-index: 15;
 }
 .navmenuitem{
 color: black !important;
@@ -339,7 +341,7 @@ flex: 65%;
 margin: 0;
 background-color: rgba(255, 255, 255, 0.4);
 margin: 0 0.64em 0 0.64em;
-padding: 0.5em 3.3em 0 3.3em;
+padding: 0.75em 3.3em 0 3.3em;
 border-radius: 10px 10px 0 0;
 }
 .formheading:after{
@@ -677,7 +679,7 @@ text-align: center;
 padding: 0 !important;
 display: none;
 }
-.grow{
+header .grow{
 margin-left: 0.5em;
 }
 .logo{
@@ -718,6 +720,9 @@ height: auto;
 }
 #my-pics {
 width: 90% !important;
+}
+#reviews{
+margin-bottom: -1em !important;
 }
 .menubutton, .contactbutton, .gallerybutton{
 margin: 0.5em 0.1em 0.1em 0.1em;
@@ -783,6 +788,4 @@ padding: 0.5em 0.2em 0.5em 0.2em;
   text-align: center;
   font-size: 0.7em;
 }
-}
-
 
