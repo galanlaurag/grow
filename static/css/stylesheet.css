@@ -116,6 +116,7 @@ transform: scale(1.01);
   padding-left: 2em;
   width: 350%;
   text-align: center;
+  z-index: 20;
 }
 .dropdown a {
   display: block;
