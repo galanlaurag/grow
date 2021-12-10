@@ -28,14 +28,16 @@ scroll-behavior: smooth;
 }
 html, body {
 height: 100%;
-overflow-x:hidden; 
 }
 body, main, .content {
 min-height: 100%;
 }
 body{
-position: absolute !important;
 width: 100% !important;
+}
+main{
+overflow-x: hidden;
+overflow-y: visible;
 }
 #myBtn{
 display: block;
