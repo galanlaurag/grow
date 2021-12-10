@@ -28,9 +28,14 @@ scroll-behavior: smooth;
 }
 html, body {
 height: 100%;
+overflow-x:hidden; 
 }
 body, main, .content {
 min-height: 100%;
+}
+body{
+position: absolute !important;
+width: 100% !important;
 }
 #myBtn{
 display: block;
@@ -529,6 +534,7 @@ footer img, .details img {
   padding: 0.5em;
 }
 
+
 /*responsiveness*/
 @media only screen and (max-width: 1400px) {
 .landingpage h1{
@@ -815,4 +821,4 @@ width: 100% !important;
   text-align: center;
   font-size: 0.7em;
 }
-
+}
