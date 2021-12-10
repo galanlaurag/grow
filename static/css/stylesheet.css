@@ -280,7 +280,7 @@ flex: 25%;
 
 /*menu*/
 .navmenu {
-position: sticky;
+position: fixed;
 top:4em;
 background-color: #FAC9B8;
 font-size: 0.4em;
@@ -289,9 +289,15 @@ list-style-type: none;
 display: flex;
 align-items: center;
 justify-content: space-between !important;
+text-align: center;
 padding: 0.5em 12em 0.5em 12em;
 border-bottom: 1px solid #444054;
-z-index: 15;
+z-index: 19;
+width: 100%;
+}
+.menuheader{
+margin: 2em 0 2em 0;
+display: none;
 }
 .navmenuitem{
 color: black !important;
@@ -329,7 +335,6 @@ margin-left: 1em;
 .anchor{
 display: block;
 position: relative;
-/*top: -11em;*/
 visibility: hidden;
 }
 
