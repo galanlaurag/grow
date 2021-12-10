@@ -1,17 +1,6 @@
 //AOS animate on scroll library
+//source: https://michalsnik.github.io/aos/
 AOS.init();
-
-//dark mode
-function onload() {
-  document.getElementsByTagName('html')[0].classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
-  document.querySelector(".mode_img").addEventListener('click', manageMode);
-
-  function manageMode() {
-    var mode = localStorage.getItem('darkmode') === 'true';
-    localStorage.setItem('darkmode', !mode);
-    document.getElementsByTagName('html')[0].classList.toggle('dark-mode', !mode);
-  }
-}
 
 //top button
 //sources: https://codepen.io/matthewcain/pen/ZepbeR, https://www.geeksforgeeks.org/how-to-animate-scrolltop-using-jquery/
